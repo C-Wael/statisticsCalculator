@@ -25,7 +25,7 @@ const getMode = (array) => {
         return null; // so if there is only one unique value present its gonna return null
     }
     const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0]; // sorting the keys of the counts array in descending order, and retrieving the first key from the sorted array
-    const mode = Object.keys(counts);
+    const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
     
     
 }
